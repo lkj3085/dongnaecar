@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "neighborhood",
+    "slug": "neighborhood",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "neighborhood"
+}
