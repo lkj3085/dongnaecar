@@ -3,9 +3,12 @@
     "name": "neighborhood",
     "slug": "neighborhood",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#fff"
+    }
   },
   "name": "neighborhood"
 }

@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   reservatingNumber: {
-    marginTop: 12,
+    marginTop: 9,
     marginRight: 50,
     fontSize: 20,
     color: "#5628F4",

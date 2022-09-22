@@ -3,10 +3,12 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
   },
   container1: {
     flex: 1,
     backgroundColor: "black",
+    padding: 10,
   },
   profileImage: {
     flex: 1,
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
     width: 120,
     borderRadius: 50,
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: 20,
   },
   gearContainer: {
     height: 110,
@@ -80,10 +82,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
+    borderBottomWidth: 1,
+    color: "black",
   },
   couponContainer: {
     marginTop: -13,
-    width: 120 * 1.7,
+    width: 115 * 1.8,
     height: 95,
     backgroundColor: "white",
   },
@@ -100,7 +104,7 @@ const styles = StyleSheet.create({
   },
   rewordContainer: {
     marginTop: -13,
-    width: 120 * 1.5,
+    width: 115 * 1.8,
     height: 95,
     backgroundColor: "white",
   },
