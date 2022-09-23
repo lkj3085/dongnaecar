@@ -19,7 +19,7 @@ const RootNavigation = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="로그인" component={Login} />
         <Stack.Screen name="회원가입" component={Register} /> */}
-        {/* <Stack.Screen name="Welcome" component={Welcome} /> */}
+        <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Home" component={HomeTab} />
         <Stack.Screen name="프로필 상세" component={ProfileDetail} />
         <Stack.Screen name="예약내역" component={ReservationList} />
