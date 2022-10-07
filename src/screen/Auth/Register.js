@@ -14,18 +14,12 @@ const Register = ({ navigation }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
-  const { register } = useContext(AuthContext);
+  // const { register } = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>
-        <Text>{val}</Text>
-        <TextInput
-          style={styles.input}
-          value={name}
-          onChangeText={(text) => setName(text)}
-          placeholder="Name"
-        />
+        {/* <Text>{val}</Text> */}
 
         <TextInput
           style={styles.input}
@@ -42,8 +36,19 @@ const Register = ({ navigation }) => {
           secureTextEntry
         />
 
+        <TextInput
+          style={styles.input}
+          value={name}
+          onChangeText={(text) => setName(text)}
+          placeholder="Name"
+        />
+
+        <TextInput style={styles.input} placeholder="휴대폰 번호" />
+
+        {/* {서비스 이용역관 동의} */}
+
         <Button
-          title="로그인"
+          title="가입하기"
           onPress={() => {
             register(name, email, password);
           }}

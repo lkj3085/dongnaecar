@@ -1,9 +1,11 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
+    justifyContent: "center",
+    alignContent: "center",
   },
   container1: {
     flex: 1,
@@ -12,23 +14,23 @@ const styles = StyleSheet.create({
   },
   profileImage: {
     flex: 1,
-    marginLeft: 140,
-    height: 120,
+    height: 100,
     width: 120,
-    borderRadius: 50,
+    marginLeft: 135,
     justifyContent: "center",
-    marginTop: 20,
+    alignContent: "center",
+    alignItems: "center",
   },
   gearContainer: {
-    height: 110,
-    width: 110,
+    height: 100,
+    width: 100,
     borderRadius: 60,
     backgroundColor: "white",
   },
   gearContainer1: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 70,
+    marginTop: 80,
     marginLeft: 85,
     backgroundColor: "white",
     borderRadius: 20,
@@ -36,19 +38,18 @@ const styles = StyleSheet.create({
   },
   profileName: {
     color: "white",
-    marginTop: 25,
     textAlign: "center",
-    justifyContent: "center",
-    alignItems: "center",
     fontWeight: "bold",
-    fontSize: 25,
+    fontSize: 22,
+    marginLeft: Platform.OS === "android" ? 15 : -20,
+    marginTop: Platform.OS === "android" ? 15 : 25,
   },
   middleContainer: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "space-evenly",
+    alignContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    marginTop: 50,
   },
   reservationContainer: {
     height: 60,
@@ -56,7 +57,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderWidth: 1,
     borderColor: "#fff",
-    marginRight: 30,
     backgroundColor: "black",
   },
   reservationText: {
@@ -79,17 +79,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   middleContainer1: {
-    justifyContent: "space-between",
-    alignItems: "center",
+    justifyContent: "space-evenly",
     flexDirection: "row",
-    borderBottomWidth: 1,
-    color: "black",
+    color: "grey",
   },
   couponContainer: {
-    marginTop: -13,
-    width: 115 * 1.8,
-    height: 95,
+    width: 90 * 1.8,
+    height: 80,
     backgroundColor: "white",
+    justifyContent: "center",
   },
   couponText: {
     fontWeight: "bold",
@@ -103,9 +101,9 @@ const styles = StyleSheet.create({
     margin: 12,
   },
   rewordContainer: {
-    marginTop: -13,
-    width: 115 * 1.8,
-    height: 95,
+    justifyContent: "center",
+    width: 90 * 1.8,
+    height: 80,
     backgroundColor: "white",
   },
   rewordText: {

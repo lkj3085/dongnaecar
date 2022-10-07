@@ -32,9 +32,6 @@ const Reservation = () => {
         <TouchableOpacity style={styles.cardContainer}>
           <View style={styles.cardViewContainer}></View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.cardContainer}>
-          <View style={styles.cardViewContainer}></View>
-        </TouchableOpacity>
       </ScrollView>
     </View>
   );

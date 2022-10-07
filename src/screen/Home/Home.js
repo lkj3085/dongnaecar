@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import {
   View,
   Text,
@@ -5,11 +6,11 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
-  ImageBackground,
 } from "react-native";
-import React from "react";
 
 const Home = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView style={styles.flexScreen}>
       <View style={styles.rootContainer}>
@@ -19,7 +20,10 @@ const Home = () => {
           <Text style={styles.textStyle3}>
             추가적인 세차가 필요할 때 합리적인 가격으로 이용하세요
           </Text>
-          <TouchableOpacity style={styles.touchContainer}>
+          <TouchableOpacity
+            style={styles.touchContainer}
+            onPress={() => navigation.navigate("Service")}
+          >
             <Text style={styles.textService}>서비스 신청</Text>
           </TouchableOpacity>
         </View>
@@ -56,17 +60,26 @@ const Home = () => {
         </View>
       </View>
       <View style={styles.middleContainer}>
-        <TouchableOpacity style={styles.middleTouch}>
+        <TouchableOpacity
+          style={styles.middleTouch}
+          onPress={() => navigation.navigate("ServiceGuide")}
+        >
           <Text style={styles.textStyle4}>서비스 가이드</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.middleContainer2}>
-        <TouchableOpacity style={styles.middleTouch2}>
+        <TouchableOpacity
+          style={styles.middleTouch2}
+          onPress={() => navigation.navigate("Area")}
+        >
           <Text style={styles.textStyle4}>지역 안내</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.middleContainer3}>
-        <TouchableOpacity style={styles.middleTouch3}>
+        <TouchableOpacity
+          style={styles.middleTouch3}
+          onPress={() => navigation.navigate("Detailer")}
+        >
           <Text style={styles.textStyle5}>디테일러 지원하기</Text>
         </TouchableOpacity>
       </View>
@@ -216,9 +229,8 @@ const styles = StyleSheet.create({
   },
   footContainer2: {
     flex: 1,
-    height: 300,
+    height: 250,
     width: 430,
-    borderRadius: 45,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
@@ -226,7 +238,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     backgroundColor: "#F3F4F6",
   },
-  footContainer3: { marginBottom: 20, marginTop: -50 },
+  footContainer3: { marginBottom: 20, marginTop: -30 },
   textStyle6: {
     color: "9CA3AF",
     fontWeight: "bold",
