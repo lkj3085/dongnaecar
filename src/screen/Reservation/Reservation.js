@@ -12,7 +12,7 @@ const Reservation = () => {
       </View>
       <View style={styles.reservatingContainer}>
         <Text style={styles.reservatingText}>진행중인 예약</Text>
-        <Text style={styles.reservatingNumber}>3</Text>
+        <Text style={styles.reservatingNumber}>1</Text>
       </View>
       {/* <Text
         style={{ letterSpacing: 5, textAlign: "center", color: "lightgrey" }}
@@ -24,12 +24,6 @@ const Reservation = () => {
           style={styles.cardContainer}
           onPress={() => navigation.navigate("예약 상세")}
         >
-          <View style={styles.cardViewContainer}></View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.cardContainer}>
-          <View style={styles.cardViewContainer}></View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.cardContainer}>
           <View style={styles.cardViewContainer}></View>
         </TouchableOpacity>
       </ScrollView>

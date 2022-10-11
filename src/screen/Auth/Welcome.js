@@ -36,11 +36,6 @@ export default function Welcome() {
             <Text style={styles.kakaoText}>카카오톡으로 시작하기</Text>
           </Pressable>
         </View>
-        <View style={styles.textStyle3}>
-          <Pressable style={styles.middleContainer2}>
-            <Text style={styles.loginText}>Google로 시작하기</Text>
-          </Pressable>
-        </View>
 
         <View style={styles.textStyle3}>
           <Pressable
@@ -58,6 +53,13 @@ export default function Welcome() {
             <Text style={styles.loginText}>둘러보기</Text>
           </Pressable>
         </View>
+        <View style={styles.findContainer}>
+          <View style={styles.findMiddleContainer}>
+            <Pressable>
+              <Text style={styles.textStyle4}>아이디 / 비밀번호 찾기</Text>
+            </Pressable>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {},
   middleContainer: {
-    margin: 10,
+    padding: 10,
     alignContent: "center",
     marginLeft: 20,
   },
@@ -80,7 +82,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
   },
-  textStyle2: { color: "#111827", fontSize: 20, fontWeight: "bold" },
+  textStyle2: {
+    color: "#111827",
+    fontSize: 25,
+    fontWeight: "bold",
+    marginBottom: -30,
+  },
   middleContainer2: {
     flex: 1,
     justifyContent: "center",
@@ -117,4 +124,10 @@ const styles = StyleSheet.create({
   appleText: { color: "white", fontWeight: "bold" },
   kakaoText: { color: "black", fontWeight: "bold" },
   loginText: { color: "#000000" },
+  findContainer: {
+    flexDirection: "row",
+    borderBottomWidth: 1,
+  },
+  findMiddleContainer: { paddingHorizontal: 5 },
+  textStyle4: { color: "grey", letterSpacing: 1, textAlign: "center" },
 });

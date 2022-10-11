@@ -5,7 +5,7 @@ export default function ServiceGuide() {
   return (
     <View>
       <Text>ServiceGuide</Text>
-      {/* {모달로 온보딩} */}
+      <Text>온보딩 이미지</Text>
     </View>
   );
 }

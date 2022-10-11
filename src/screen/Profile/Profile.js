@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef, useState } from "react";
 import {
   View,
   Text,
@@ -10,22 +10,22 @@ import {
 import { Octicons } from "@expo/vector-icons";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import Footer from "../Footer/Footer";
 
 const Profile = () => {
   const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
-        <Pressable
-          style={styles.profileImage}
-          onPress={() => console.log("click")}
-        >
+        <Pressable style={styles.profileImage}>
           <Image
             source={require("../../../assets/profile.png")}
             resizeMode="cover"
             style={{ width: "100%", height: "100%" }}
           />
         </Pressable>
+
         <View>
           <Text style={styles.profileName}>김새차님</Text>
         </View>
@@ -46,7 +46,7 @@ const Profile = () => {
         <View style={styles.middleContainer1}>
           <Pressable
             style={styles.couponContainer}
-            onPress={() => navigation.navigate("Reservation")}
+            onPress={() => navigation.navigate("Coupon")}
           >
             <Text style={styles.couponText}>쿠폰</Text>
             <Text style={styles.couponNumber}>11장</Text>
@@ -60,7 +60,7 @@ const Profile = () => {
           </Pressable>
         </View>
       </View>
-      {/*  */}
+
       <ScrollView
         style={styles.scrollviewContainer}
         showsVerticalScrollIndicator={false}
@@ -133,9 +133,10 @@ const Profile = () => {
             </TouchableOpacity>
           </View>
           <TouchableOpacity style={{ margin: 12 }}>
-            <Text style={{ letterSpacing: 2, color: "red" }}>로그아웃</Text>
+            <Text style={{ letterSpacing: 1, color: "red" }}>로그아웃</Text>
           </TouchableOpacity>
         </View>
+        <Footer />
       </ScrollView>
     </View>
   );
