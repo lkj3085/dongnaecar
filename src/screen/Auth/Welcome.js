@@ -55,7 +55,7 @@ export default function Welcome() {
         </View>
         <View style={styles.findContainer}>
           <View style={styles.findMiddleContainer}>
-            <Pressable>
+            <Pressable onPress={() => navigation.navigate("Find")}>
               <Text style={styles.textStyle4}>아이디 / 비밀번호 찾기</Text>
             </Pressable>
           </View>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {},
   middleContainer: {
-    padding: 10,
+    padding: 20,
     alignContent: "center",
     marginLeft: 20,
   },

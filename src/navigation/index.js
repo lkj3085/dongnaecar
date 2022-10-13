@@ -22,6 +22,7 @@ import Inquiry from "../screen/Profile/Inquiry";
 import Notice from "../screen/Profile/Notice";
 import Ask from "../screen/Profile/Ask";
 import ServiceCenter from "../screen/Profile/ServiceCenter";
+import Find from "../screen/Auth/Find";
 
 const Stack = createStackNavigator();
 
@@ -52,6 +53,7 @@ const RootNavigation = () => {
         <Stack.Screen name="Notice" component={Notice} />
         <Stack.Screen name="Ask" component={Ask} />
         <Stack.Screen name="ServiceCenter" component={ServiceCenter} />
+        <Stack.Screen name="Find" component={Find} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -5,78 +5,90 @@ import {
   Button,
   TouchableOpacity,
   StyleSheet,
+  Pressable,
 } from "react-native";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "./AuthContext";
 
-const Register = ({ navigation }) => {
-  const [name, setName] = useState(null);
+const Login = ({ navigation }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-
-  // const { register } = useContext(AuthContext);
+  const [name, setName] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const val = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
-      <View style={styles.wrapper}>
-        {/* <Text>{val}</Text> */}
-
+      <View style={{ flex: 1 / 2, marginTop: 50, marginLeft: 20 }}>
+        <Text style={{ marginBottom: 10, color: "grey", fontWeight: "bold" }}>
+          STEP 2
+        </Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>회원가입</Text>
+      </View>
+      <View style={{ alignItems: "center" }}>
+        <Text>{val}</Text>
         <TextInput
           style={styles.input}
           value={email}
           onChangeText={(text) => setEmail(text)}
-          placeholder="Email"
+          placeholder="이메일을 입력해주세요"
         />
 
         <TextInput
           style={styles.input}
           value={password}
           onChangeText={(text) => setPassword(text)}
-          placeholder="Password"
+          placeholder="비밀번호를 입력해주세요"
           secureTextEntry
         />
-
         <TextInput
           style={styles.input}
           value={name}
           onChangeText={(text) => setName(text)}
-          placeholder="Name"
+          placeholder="이름"
         />
-
-        <TextInput style={styles.input} placeholder="휴대폰 번호" />
-
-        {/* {서비스 이용역관 동의} */}
-
-        <Button
-          title="가입하기"
-          onPress={() => {
-            register(name, email, password);
-          }}
+        <TextInput
+          style={styles.input}
+          value={phone}
+          onChangeText={(text) => setPhone(text)}
+          placeholder="인증번호"
         />
-
-        <View style={styles.registerContainer}></View>
+        <Button title="인증하기" />
+        <Text>서비스 이용약관 동의</Text>
+        <Text>개인정보 처리방침 동의</Text>
+        <Text>마케팅 정보수신 동의</Text>
+        <View style={styles.registerContainer}>
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
+            <Text style={styles.link}>가입하기</Text>
+          </Pressable>
+        </View>
       </View>
     </View>
   );
 };
 
-export default Register;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "white",
   },
-  wrapper: {
-    width: "80%",
-  },
+
   input: {
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: "#bbb",
-    borderRadius: 5,
-    paddingHorizontal: 14,
+    // width: 350,
+    // height: 50,
+    // marginBottom: 15,
+    // borderWidth: 1,
+    // borderColor: "#bbb",
+    // borderRadius: 5,
+    // paddingHorizontal: 14,
+    width: 300,
+    borderBottomWidth: 1,
+    borderBottomColor: "grey",
+    marginBottom: 25,
   },
   registerContainer: {
     flexDirection: "row",
@@ -86,3 +98,5 @@ const styles = StyleSheet.create({
     color: "blue",
   },
 });
+
+export default Login;

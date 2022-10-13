@@ -195,7 +195,6 @@ const styles = StyleSheet.create({
   middleTouch: {
     height: 95,
     width: 350,
-    borderRadius: 10,
     alignItems: "center",
     justifyContent: "space-between",
     borderWidth: 1,
